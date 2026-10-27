@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-gray-50 text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100; }
+
+@keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.35); } 100% { transform: scale(1); } }
+.streak-pop { animation: pop 300ms ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .streak-pop { animation: none; }
+  * { transition-duration: 0ms !important; }
+}
